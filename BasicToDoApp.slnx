@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/Presentation/">
+    <Project Path="Presentation/ToDoApp/ToDoApp.csproj" />
+  </Folder>
+</Solution>

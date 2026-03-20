@@ -1,0 +1,46 @@
+﻿@using ToDoApp.Data.Entities
+@model ToDo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2 class="text-danger">Delete Task</h2>
+
+<div class="alert alert-danger">
+    <h4 class="alert-heading">Are you sure you want to delete this task?</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            <label asp-for="Title"></label>
+        </dt>
+        <dd class="col-sm-9">
+            <span>@Model.Title</span>
+        </dd>
+        <dt class="col-sm-3">
+            <label asp-for="Description"></label>
+        </dt>
+        <dd class="col-sm-9">
+            <span>@Model.Description</span>
+        </dd>
+        <dt class="col-sm-3">
+            <label asp-for="CreatedDate"></label>
+        </dt>
+        <dd class="col-sm-9">
+            <span>@Model.CreatedDate</span>
+        </dd>
+        <dt class="col-sm-3">
+            <label asp-for="IsCompleted"></label>
+        </dt>
+        <dd class="col-sm-9">
+            <span>@Model.IsCompleted</span>
+        </dd>
+    </dl>
+</div>
+
+<div class="d-flex justify-content-between mt-4">
+    <form asp-action="DeleteTodo" class="d-inline">
+        <input type="submit" value="Delete" class="btn btn-danger btn-lg" />
+    </form>
+    <a asp-action="Index" class="btn btn-info btn-lg">Back to List</a>
+</div>
